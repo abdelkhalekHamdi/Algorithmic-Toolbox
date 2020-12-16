@@ -1,4 +1,3 @@
-#Maximum Pairwise Product
 Maximum Pairwise Product Problem:
 Find the maximum product of two distinct numbers in a sequence of non-negative integers.
 Input format: The first line contains an integer n. The next line contains n non-negative integers A 1 , . . . , aAn (separated by spaces).
