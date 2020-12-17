@@ -7,21 +7,24 @@
 /////////////////////////////////////////////
 #include <stdio.h>
 
-long long int gcdFast(long long int a, long long int b)
+long long gcd(long long a, long long b)
 {
-	long long int r;
-	if(b == 0)
-		return a;
-	else 
-		return gcdFast(b, a%b);
-
+	long long int d, best;
+	best = 0;
+	if(a < 1 || b < 1)
+		return -1;
+	else
+		for(d=1; d<=a+b; d++)
+			if(!(a%d) && !(b%d))
+				best = d;
+	return best;
 }
 
 int main()
 {
-	long long int result;
-	long long int a, b;
+	long long result;
+	long long a, b;
 	scanf("%lld %lld", &a, &b);
-	printf("%lld \n", gcdFast(a, b));
+	printf("%lld \n", gcd(a, b));
 	return 0;
 }
